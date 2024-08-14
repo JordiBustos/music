@@ -1,0 +1,20 @@
+uuid: a725c654-3402-4d93-ae0b-895377bc9c54
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_voted_nodes
+  module:
+    - user
+id: user.user.field_voted_nodes
+field_name: field_voted_nodes
+entity_type: user
+bundle: user
+label: 'Voted nodes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

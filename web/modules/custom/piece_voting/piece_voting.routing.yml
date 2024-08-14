@@ -1,0 +1,8 @@
+piece_voting.vote:
+  path: "/api/vote/{node}/update"
+  defaults:
+    _controller: '\Drupal\piece_voting\Controller\VoteController::updateVote'
+    _title: "Update Vote"
+  requirements:
+    _permission: "access content"
+    node: \d+

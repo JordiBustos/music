@@ -24,7 +24,6 @@
         "drupal/field_group": "^3.6",
         "drupal/paragraphs": "^1.18",
         "drupal/pathauto": "^1.13",
-        "drupal/poll": "^2.0@alpha",
         "drupal/search_api": "^1.35",
         "drupal/search_api_solr": "^4.3",
         "drupal/views_bulk_operations": "^4.2",

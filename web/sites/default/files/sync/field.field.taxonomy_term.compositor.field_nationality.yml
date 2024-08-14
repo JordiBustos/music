@@ -1,0 +1,21 @@
+uuid: f2a109d1-799b-4594-926b-e5c95620af7b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nationality
+    - taxonomy.vocabulary.compositor
+  module:
+    - options
+id: taxonomy_term.compositor.field_nationality
+field_name: field_nationality
+entity_type: taxonomy_term
+bundle: compositor
+label: Nationality
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

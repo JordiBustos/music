@@ -1,0 +1,29 @@
+uuid: dc3bb931-fdbb-49c9-8ef9-0cdfb70e85d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_compositor
+    - node.type.piece
+    - taxonomy.vocabulary.compositor
+id: node.piece.field_compositor
+field_name: field_compositor
+entity_type: node
+bundle: piece
+label: Compositor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      compositor: compositor
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

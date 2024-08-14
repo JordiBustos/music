@@ -1,0 +1,25 @@
+uuid: 58024216-32f8-4ab8-90fc-d4982780ae1a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_difficulty
+    - node.type.piece
+id: node.piece.field_difficulty
+field_name: field_difficulty
+entity_type: node
+bundle: piece
+label: Difficulty
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

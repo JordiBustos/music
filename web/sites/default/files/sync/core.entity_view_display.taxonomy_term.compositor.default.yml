@@ -1,0 +1,59 @@
+uuid: 38f1f5a2-3174-42a5-a294-e10251987562
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.compositor.field_bio
+    - field.field.taxonomy_term.compositor.field_image
+    - field.field.taxonomy_term.compositor.field_nationality
+    - taxonomy.vocabulary.compositor
+  module:
+    - image
+    - link
+    - options
+    - text
+id: taxonomy_term.compositor.default
+targetEntityType: taxonomy_term
+bundle: compositor
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_bio:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_nationality:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

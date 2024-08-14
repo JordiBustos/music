@@ -1,0 +1,16 @@
+uuid: 0dfd8130-1c66-40f6-af91-7c45084ea476
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.compositor
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.compositor
+target_entity_type_id: taxonomy_term
+target_bundle: compositor
+default_langcode: site_default
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: eb9f09f6-5b02-45c5-a434-5e458122e106
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_voted_nodes
+field_name: field_voted_nodes
+entity_type: user
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

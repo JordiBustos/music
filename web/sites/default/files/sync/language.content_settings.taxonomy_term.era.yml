@@ -1,0 +1,16 @@
+uuid: 9dde9f5d-7de7-4b03-8fe7-7ed4e02e3451
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.era
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.era
+target_entity_type_id: taxonomy_term
+target_bundle: era
+default_langcode: site_default
+language_alterable: true

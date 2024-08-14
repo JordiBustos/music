@@ -1,0 +1,5 @@
+name: "Piece Voting"
+type: module
+description: "Allows users to vote on nodes of type Piece and updates the difficulty field."
+core_version_requirement: ^10 || ^11
+package: Custom
