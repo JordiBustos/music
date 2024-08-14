@@ -1,0 +1,20 @@
+uuid: 1c082cf1-a2d7-4330-ae47-57318bf0399a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - music
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: music_page_title
+theme: music
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

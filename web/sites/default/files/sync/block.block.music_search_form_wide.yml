@@ -1,0 +1,23 @@
+uuid: 323c7c6a-c0ad-4f60-954b-f6f9b211f1eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - music
+_core:
+  default_config_hash: imMyHD6LYci0gtXq56qr9ZKGHzbEG9uFydrN5EhKtSU
+id: music_search_form_wide
+theme: music
+region: secondary_menu
+weight: -5
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form (wide)'
+  label_display: '0'
+  provider: search
+  page_id: ''
+visibility: {  }
