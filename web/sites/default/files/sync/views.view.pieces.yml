@@ -12,6 +12,7 @@ dependencies:
     - taxonomy.vocabulary.instrument
   module:
     - node
+    - statistics
     - taxonomy
     - user
 id: pieces
@@ -613,31 +614,31 @@ display:
             field_compositor: field_compositor
             field_era: field_era
             field_difficulty: field_difficulty
-          default: field_difficulty
+          default: '-1'
           info:
             title:
-              sortable: true
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             field_compositor:
-              sortable: true
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             field_era:
-              sortable: true
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             field_difficulty:
-              sortable: true
+              sortable: false
               default_sort_order: asc
               align: ''
               separator: ''
@@ -647,7 +648,7 @@ display:
           sticky: false
           summary: ''
           empty_table: false
-          caption: 'List of pieces.'
+          caption: Trending
           description: ''
       row:
         type: fields
@@ -684,10 +685,68 @@ display:
         - 'config:field.storage.node.field_era'
   block_1:
     id: block_1
-    display_title: Block
+    display_title: Pieces
     display_plugin: block
     position: 1
     display_options:
+      style:
+        type: table
+        options:
+          grouping: {  }
+          row_class: ''
+          default_row_class: false
+          columns:
+            title: title
+            field_compositor: field_compositor
+            field_era: field_era
+            field_difficulty: field_difficulty
+          default: field_difficulty
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_compositor:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_era:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_difficulty:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: Pieces
+          description: ''
+      row:
+        type: fields
+        options:
+          default_field_elements: true
+          inline: {  }
+          separator: ''
+          hide_empty: true
+      defaults:
+        style: false
+        row: false
+      display_description: ''
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -696,6 +755,75 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'user.node_grants:view'
+        - user.permissions
+      tags:
+        - 'config:field.storage.node.field_compositor'
+        - 'config:field.storage.node.field_difficulty'
+        - 'config:field.storage.node.field_era'
+  block_2:
+    id: block_2
+    display_title: Trending
+    display_plugin: block
+    position: 2
+    display_options:
+      pager:
+        type: some
+        options:
+          offset: 0
+          items_per_page: 10
+      sorts:
+        totalcount:
+          id: totalcount
+          table: node_counter
+          field: totalcount
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+      filters:
+        type:
+          id: type
+          table: node_field_data
+          field: type
+          entity_type: node
+          entity_field: type
+          plugin_id: bundle
+          value:
+            piece: piece
+          group: 1
+        status:
+          id: status
+          table: node_field_data
+          field: status
+          entity_type: node
+          entity_field: status
+          plugin_id: boolean
+          value: '1'
+          group: 1
+          expose:
+            operator: ''
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      defaults:
+        pager: false
+        sorts: false
+        filters: false
+        filter_groups: false
+      display_description: ''
+      display_extenders: {  }
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
         - 'user.node_grants:view'
         - user.permissions
       tags:

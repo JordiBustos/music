@@ -26,6 +26,7 @@
         "drupal/pathauto": "^1.13",
         "drupal/search_api": "^1.35",
         "drupal/search_api_solr": "^4.3",
+        "drupal/statistics": "^1.0",
         "drupal/views_bulk_operations": "^4.2",
         "drush/drush": "^13.0"
     },

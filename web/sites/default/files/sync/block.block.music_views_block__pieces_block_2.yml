@@ -1,0 +1,29 @@
+uuid: 8e1ebe12-0dd1-463c-aa65-a6ddf0b42f5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.pieces
+  module:
+    - system
+    - views
+  theme:
+    - music
+id: music_views_block__pieces_block_2
+theme: music
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:pieces-block_2'
+settings:
+  id: 'views_block:pieces-block_2'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
