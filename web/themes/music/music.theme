@@ -60,6 +60,6 @@ function music_preprocess_views_exposed_form(&$variables) {
       $form['field_instrument_target_id']['#options']['All'] = t('- Any Instrument -');
     }
 
-    $form['actions']['submit']['#attributes']['class'][] = 'block w-1/6 p-2 my-4 mx-auto border-2 border-solid border-indigo-400 rounded';
+    $form['actions']['submit']['#attributes']['class'][] = 'block text-white cursor-pointer bg-black hover:bg-grigio rounded-lg w-fit px-4 py-1.5 text-xl my-4 mx-auto';
   }
 }
