@@ -2,7 +2,7 @@ uuid: c43b08bd-48af-419e-9025-47eb05cf96ec
 langcode: zxx
 status: true
 dependencies: {  }
-name: Compositor
+name: Composer
 vid: compositor
 description: null
 weight: 0

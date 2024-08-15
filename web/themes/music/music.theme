@@ -47,7 +47,7 @@ function music_preprocess_views_exposed_form(&$variables) {
 
     if (isset($form['field_compositor_target_id'])) {
       $form['field_compositor_target_id']['#attributes']['class'][] = $text_input_classes;
-      $form['field_compositor_target_id']['#attributes']['placeholder'] = t('Enter a Compositor');
+      $form['field_compositor_target_id']['#attributes']['placeholder'] = t('Enter a Composer');
     }
 
     if (isset($form['field_era_target_id'])) {
