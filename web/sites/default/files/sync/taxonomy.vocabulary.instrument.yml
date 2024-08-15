@@ -1,0 +1,9 @@
+uuid: dc85362e-270e-48cc-9bf8-b811330a4984
+langcode: zxx
+status: true
+dependencies: {  }
+name: Instrument
+vid: instrument
+description: null
+weight: 0
+new_revision: false

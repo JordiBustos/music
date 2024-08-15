@@ -1,0 +1,31 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./templates/**/*.twig"],
+  safelist: [
+    "block",
+    "text-xl",
+    "border-0",
+    "border-b",
+    "border-black",
+    "ring-0",
+    "placeholder:text-grigio",
+    "text-grigio",
+    "focus:border-black",
+    "focus:ring-0",
+    "lg:text-3xl",
+    "form-text",
+    "m-auto",
+    "w-11/12",
+    "flex-column",
+    "w-1/6",
+    "border-indigo-400",
+    "border-solid",
+    "border-2",
+    "mx-auto",
+    "my-4",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};

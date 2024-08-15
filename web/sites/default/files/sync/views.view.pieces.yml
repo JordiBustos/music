@@ -9,6 +9,7 @@ dependencies:
     - node.type.piece
     - taxonomy.vocabulary.compositor
     - taxonomy.vocabulary.era
+    - taxonomy.vocabulary.instrument
   module:
     - node
     - taxonomy
@@ -37,7 +38,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: Title
           exclude: false
           alter:
             alter_text: false
@@ -100,7 +101,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: Compositor
           exclude: false
           alter:
             alter_text: false
@@ -144,7 +145,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -163,7 +164,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: Era
           exclude: false
           alter:
             alter_text: false
@@ -207,7 +208,7 @@ display:
           click_sort_column: target_id
           type: entity_reference_label
           settings:
-            link: true
+            link: false
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -226,7 +227,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: ''
+          label: Difficulty
           exclude: false
           alter:
             alter_text: false
@@ -357,7 +358,7 @@ display:
           exposed: true
           expose:
             operator_id: title_op
-            label: Title
+            label: ''
             description: ''
             use_operator: false
             operator: title_op
@@ -402,7 +403,7 @@ display:
           exposed: true
           expose:
             operator_id: field_difficulty_value_op
-            label: Difficulty
+            label: ''
             description: ''
             use_operator: false
             operator: field_difficulty_value_op
@@ -446,7 +447,7 @@ display:
           exposed: true
           expose:
             operator_id: field_compositor_target_id_op
-            label: Compositor
+            label: ''
             description: ''
             use_operator: false
             operator: field_compositor_target_id_op
@@ -455,7 +456,7 @@ display:
             identifier: field_compositor_target_id
             required: false
             remember: false
-            multiple: false
+            multiple: true
             remember_roles:
               authenticated: authenticated
               anonymous: '0'
@@ -494,7 +495,7 @@ display:
           exposed: true
           expose:
             operator_id: field_era_target_id_op
-            label: Era
+            label: ''
             description: ''
             use_operator: false
             operator: field_era_target_id_op
@@ -549,16 +550,105 @@ display:
           group: 1
           expose:
             operator: ''
+        field_instrument_target_id:
+          id: field_instrument_target_id
+          table: node__field_instrument
+          field: field_instrument_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_instrument_target_id_op
+            label: ''
+            description: ''
+            use_operator: false
+            operator: field_instrument_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_instrument_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: instrument
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
           1: AND
       style:
-        type: default
+        type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: false
+          columns:
+            title: title
+            field_compositor: field_compositor
+            field_era: field_era
+            field_difficulty: field_difficulty
+          default: field_difficulty
+          info:
+            title:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_compositor:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_era:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_difficulty:
+              sortable: true
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: 'List of pieces.'
+          description: ''
       row:
         type: fields
         options:

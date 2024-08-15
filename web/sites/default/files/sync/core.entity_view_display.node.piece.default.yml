@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.piece.field_compositor
     - field.field.node.piece.field_difficulty
     - field.field.node.piece.field_era
+    - field.field.node.piece.field_instrument
     - field.field.node.piece.field_publication_date
     - field.field.node.piece.field_total_votes
     - field.field.node.piece.field_youtube_link
@@ -74,6 +75,14 @@ content:
       link: true
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_instrument:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_publication_date:
     type: datetime_default

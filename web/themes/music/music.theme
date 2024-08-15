@@ -27,3 +27,39 @@ function music_preprocess_page(array &$variables): void {
 function music_preprocess_node(array &$variables): void {
 
 }
+
+/**
+ * Implements hook_preprocess_views_exposed_form().
+ */
+function music_preprocess_views_exposed_form(&$variables) {
+  if ($variables["form"]["#id"] == 'views-exposed-form-pieces-block-1') {
+    $form = &$variables['form'];
+
+    $text_input_classes = 'block p-2 my-4 mx-auto w-11/12 text-xl border-0 border-b border-black ring-0 placeholder:text-grigio text-grigio focus:border-black focus:ring-0 lg:text-3xl';
+
+    if (isset($form['title'])) {
+      $form['title']['#attributes']['class'][] = $text_input_classes;
+    }
+
+    if (isset($form['field_difficulty_value'])) {
+      $form['field_difficulty_value']['#attributes']['class'][] = $text_input_classes;
+    }
+
+    if (isset($form['field_compositor_target_id'])) {
+      $form['field_compositor_target_id']['#attributes']['class'][] = $text_input_classes;
+      $form['field_compositor_target_id']['#attributes']['placeholder'] = t('Enter a Compositor');
+    }
+
+    if (isset($form['field_era_target_id'])) {
+      $form['field_era_target_id']['#attributes']['class'][] = $text_input_classes;
+      $form['field_era_target_id']['#options']['All'] = t('- Any Era -');
+    }
+
+    if (isset($form['field_instrument_target_id'])) {
+      $form['field_instrument_target_id']['#attributes']['class'][] = $text_input_classes;
+      $form['field_instrument_target_id']['#options']['All'] = t('- Any Instrument -');
+    }
+
+    $form['actions']['submit']['#attributes']['class'][] = 'block w-1/6 p-2 my-4 mx-auto border-2 border-solid border-indigo-400 rounded';
+  }
+}

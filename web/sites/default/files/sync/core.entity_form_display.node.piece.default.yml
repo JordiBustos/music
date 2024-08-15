@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.piece.field_compositor
     - field.field.node.piece.field_difficulty
     - field.field.node.piece.field_era
+    - field.field.node.piece.field_instrument
     - field.field.node.piece.field_publication_date
     - field.field.node.piece.field_total_votes
     - field.field.node.piece.field_youtube_link
@@ -80,6 +81,16 @@ content:
   field_era:
     type: entity_reference_autocomplete
     weight: 11
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_instrument:
+    type: entity_reference_autocomplete
+    weight: 29
     region: content
     settings:
       match_operator: CONTAINS
