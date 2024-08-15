@@ -26,6 +26,21 @@ settings:
     -
       value: belgium
       label: Belgium
+    -
+      value: brazil
+      label: Brazil
+    -
+      value: bulgaria
+      label: Bulgaria
+    -
+      value: canada
+      label: Canada
+    -
+      value: china
+      label: China
+    -
+      value: congo
+      label: Congo
   allowed_values_function: ''
 module: options
 locked: false
