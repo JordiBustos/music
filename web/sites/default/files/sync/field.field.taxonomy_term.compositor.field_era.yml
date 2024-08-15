@@ -1,0 +1,29 @@
+uuid: 2904e9b5-a425-496e-8bf7-64ff066e9991
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_era
+    - taxonomy.vocabulary.compositor
+    - taxonomy.vocabulary.era
+id: taxonomy_term.compositor.field_era
+field_name: field_era
+entity_type: taxonomy_term
+bundle: compositor
+label: Era
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      era: era
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

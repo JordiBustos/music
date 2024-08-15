@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.piece.field_difficulty
     - field.field.node.piece.field_era
     - field.field.node.piece.field_instrument
+    - field.field.node.piece.field_is_benchmark
     - field.field.node.piece.field_publication_date
     - field.field.node.piece.field_total_votes
     - field.field.node.piece.field_youtube_link
@@ -97,6 +98,13 @@ content:
       match_limit: 10
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_is_benchmark:
+    type: boolean_checkbox
+    weight: 30
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_publication_date:
     type: datetime_default

@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.compositor.field_bio
+    - field.field.taxonomy_term.compositor.field_era
     - field.field.taxonomy_term.compositor.field_image
     - field.field.taxonomy_term.compositor.field_nationality
     - taxonomy.vocabulary.compositor
@@ -35,6 +36,14 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 3
+    region: content
+  field_era:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_image:
     type: image

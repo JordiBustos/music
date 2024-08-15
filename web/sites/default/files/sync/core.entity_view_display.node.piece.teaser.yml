@@ -11,6 +11,7 @@ dependencies:
     - field.field.node.piece.field_difficulty
     - field.field.node.piece.field_era
     - field.field.node.piece.field_instrument
+    - field.field.node.piece.field_is_benchmark
     - field.field.node.piece.field_publication_date
     - field.field.node.piece.field_total_votes
     - field.field.node.piece.field_youtube_link
@@ -43,6 +44,7 @@ hidden:
   field_difficulty: true
   field_era: true
   field_instrument: true
+  field_is_benchmark: true
   field_publication_date: true
   field_total_votes: true
   field_youtube_link: true

@@ -1,0 +1,33 @@
+uuid: 344485e1-180c-4c82-9939-29f41e48eb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.pieces
+  module:
+    - node
+    - views
+  theme:
+    - music
+id: music_views_block__pieces_block_3
+theme: music
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:pieces-block_3'
+settings:
+  id: 'views_block:pieces-block_3'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      piece: piece

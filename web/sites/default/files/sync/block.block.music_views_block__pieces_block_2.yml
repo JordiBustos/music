@@ -12,7 +12,7 @@ dependencies:
 id: music_views_block__pieces_block_2
 theme: music
 region: content
-weight: 0
+weight: -6
 provider: null
 plugin: 'views_block:pieces-block_2'
 settings:

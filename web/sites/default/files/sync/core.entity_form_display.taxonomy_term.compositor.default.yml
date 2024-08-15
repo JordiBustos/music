@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.taxonomy_term.compositor.field_bio
+    - field.field.taxonomy_term.compositor.field_era
     - field.field.taxonomy_term.compositor.field_image
     - field.field.taxonomy_term.compositor.field_nationality
     - image.style.thumbnail
@@ -40,6 +41,16 @@ content:
     settings:
       placeholder_url: ''
       placeholder_title: ''
+    third_party_settings: {  }
+  field_era:
+    type: entity_reference_autocomplete
+    weight: 104
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
     third_party_settings: {  }
   field_image:
     type: image_image

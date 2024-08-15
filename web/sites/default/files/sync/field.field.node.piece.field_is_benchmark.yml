@@ -1,0 +1,21 @@
+uuid: b744c381-011d-4703-ab11-5f7732b6cd0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_is_benchmark
+    - node.type.piece
+id: node.piece.field_is_benchmark
+field_name: field_is_benchmark
+entity_type: node
+bundle: piece
+label: 'Is Benchmark'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
