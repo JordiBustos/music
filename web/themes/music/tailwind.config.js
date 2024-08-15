@@ -3,6 +3,7 @@ module.exports = {
   content: ["./templates/**/*.twig"],
   safelist: [
     "block",
+    "hidden",
     "text-xl",
     "border-0",
     "border-b",
