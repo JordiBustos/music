@@ -11,7 +11,7 @@ _core:
 id: music_messages
 theme: music
 region: header
-weight: -5
+weight: -6
 provider: null
 plugin: system_messages_block
 settings:

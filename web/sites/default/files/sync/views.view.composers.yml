@@ -6,6 +6,7 @@ dependencies:
     - field.storage.taxonomy_term.field_era
     - field.storage.taxonomy_term.field_nationality
     - taxonomy.vocabulary.compositor
+    - taxonomy.vocabulary.era
   module:
     - node
     - options
@@ -402,54 +403,6 @@ display:
           plugin_id: bundle
           value:
             compositor: compositor
-        field_era_target_id:
-          id: field_era_target_id
-          table: taxonomy_term__field_era
-          field: field_era_target_id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: taxonomy_index_tid
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_era_target_id_op
-            label: Era
-            description: ''
-            use_operator: false
-            operator: field_era_target_id_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_era_target_id
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              content_editor: '0'
-              administrator: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          vid: compositor
-          type: select
-          hierarchy: false
-          limit: true
-          error_message: true
         field_nationality_value:
           id: field_nationality_value
           table: taxonomy_term__field_nationality
@@ -493,6 +446,54 @@ display:
             default_group_multiple: {  }
             group_items: {  }
           reduce_duplicates: false
+        field_era_target_id:
+          id: field_era_target_id
+          table: taxonomy_term__field_era
+          field: field_era_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_era_target_id_op
+            label: Era
+            description: ''
+            use_operator: false
+            operator: field_era_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_era_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              content_editor: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          vid: era
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       style:
         type: table
         options:
@@ -545,6 +546,7 @@ display:
           entity_type: taxonomy_term
           plugin_id: entity_reverse
           required: false
+      use_ajax: true
       group_by: true
       header: {  }
       footer: {  }

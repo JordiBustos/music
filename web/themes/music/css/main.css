@@ -5,3 +5,7 @@
 .visually-hidden {
   display: none !important;
 }
+
+.feed-icon {
+  display: none;
+}

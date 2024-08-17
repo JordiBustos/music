@@ -42,7 +42,7 @@
 %}
 <table{{ attributes.addClass(classes) }}>
   {% if caption_needed %}
-    <caption class="text-4xl font-extrabold">
+    <caption class="mt-4 text-4xl font-extrabold">
     {% if caption %}
       {{ caption }}
     {% else %}
@@ -65,7 +65,7 @@
               ]
             %}
           {% endif %}
-          <th class="text-start p-2 font-light" {{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
+          <th class="text-xl text-start py-2 font-light" {{ column.attributes.addClass(column_classes).setAttribute('scope', 'col') }}>
             {%- if column.wrapper_element -%}
               <{{ column.wrapper_element }}>
                 {%- if column.url -%}
@@ -88,13 +88,13 @@
   {% endif %}
   <tbody>
     {% for row in rows %}
-      <tr class="border-t border-gray-700 font-semibold hover:bg-zinc-100" {{ row.attributes }}>
+      <tr class="text-lg border-t border-gray-700 font-semibold hover:bg-zinc-100" {{ row.attributes }}>
         {% for key, column in row.columns %}
           {% if column.default_classes %}
             {%
               set column_classes = [
                 'views-field',
-                'p-2'
+                'p-4'
               ]
             %}
             {% for field in column.fields %}

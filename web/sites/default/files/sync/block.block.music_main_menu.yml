@@ -12,8 +12,8 @@ _core:
   default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
 id: music_main_menu
 theme: music
-region: primary_menu
-weight: 0
+region: secondary_menu
+weight: -8
 provider: null
 plugin: 'system_menu_block:main'
 settings:

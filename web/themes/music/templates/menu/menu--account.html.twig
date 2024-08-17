@@ -30,9 +30,9 @@
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
-      <ul class="flex justify-center gap-5 px-4 py-8 overflow-x-auto text-xl list-none text-grigio lg:text-3xl lg:px-5 scrollbar-hide" {{ attributes }}>
+      <ul class="flex justify-end gap-5 p-6 overflow-x-auto text-sm list-none text-grigio lg:text-lg scrollbar-hide" {{ attributes }}>
     {% else %}
-      <ul class="flex justify-center gap-5 px-4 py-8 overflow-x-auto text-xl list-none text-grigio lg:text-3xl lg:px-5 scrollbar-hide">
+      <ul class="flex justify-end gap-5 p-6 overflow-x-auto text-sm list-none text-grigio lg:text-lg scrollbar-hide">
     {% endif %}
     {% for item in items %}
       <li class="hover:text-gray-600" {{ item.attributes }}>
