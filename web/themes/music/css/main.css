@@ -9,3 +9,19 @@
 .feed-icon {
   display: none;
 }
+
+/**
+ *
+ * Replaces standard throbber from stable9 with Olivero's.
+ *
+ * Copied and edited from:
+ * core/themes/stable9/css/system/components/autocomplete-loading.module.css
+ *
+ */
+.js input.form-autocomplete {
+  background-image: none;
+}
+.js input.form-autocomplete.ui-autocomplete-loading {
+  background-image: url(/core/themes/olivero/images/throbber.svg);
+  background-position: 98% center;
+}
