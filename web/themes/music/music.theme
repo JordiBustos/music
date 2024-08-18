@@ -35,7 +35,7 @@ function music_preprocess_views_exposed_form(&$variables) {
   if ($variables["form"]["#id"] == 'views-exposed-form-pieces-block-1') {
     $form = &$variables['form'];
 
-    $text_input_classes = 'block p-2 my-4 mx-auto w-11/12 text-xl border-0 border-b border-black ring-0 placeholder:text-grigio text-grigio focus:border-black focus:ring-0 lg:text-3xl';
+    $text_input_classes = 'block p-4 my-4 mx-auto w-11/12 text-xl border-0 border-b border-black ring-0 placeholder:text-grigio text-grigio focus:border-black focus:ring-0 lg:text-3xl';
 
     if (isset($form['title'])) {
       $form['title']['#attributes']['class'][] = $text_input_classes;

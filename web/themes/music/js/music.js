@@ -22,4 +22,27 @@
       });
     },
   };
+
+  Drupal.behaviors.voting = {
+    attach(context, settings) {
+      once("voting", "#submit-vote", context).forEach(function (element) {
+        init();
+      });
+
+      function init() {
+        $("#submit-vote").on("click", function () {
+          let vote = $("#dropdown-poll").attr("data-current-selection");
+          let userUid = settings.user.uid;
+          let nodeId = settings.statistics.data.nid;
+
+          $.get(
+            "/api/vote/" + nodeId + "/update?vote=" + vote + "&uid=" + userUid,
+            function (data, status) {
+              $("#voting-results").html(data);
+            },
+          );
+        });
+      }
+    },
+  };
 })(Drupal, jQuery);
